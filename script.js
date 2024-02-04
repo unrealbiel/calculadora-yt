@@ -1,5 +1,5 @@
 let totalRodando = 0;
-let buffer = '0'
+let buffer = '0';
 let previousOperator;
 
 const screen = document.querySelector('.tela');
@@ -21,7 +21,7 @@ function handleSymbol(symbol) {
             break;
         case '=': 
             if(previousOperator === null) {
-                return
+                return;
             } 
             flushOperation(parseInt(buffer));
             previousOperator = null;
@@ -36,7 +36,7 @@ function handleSymbol(symbol) {
             }
             break;
         case '+':
-        case '-':
+        case '−':
         case '×':
         case '÷':
             handleMath(symbol);
@@ -63,7 +63,7 @@ function handleMath(symbol) {
 function flushOperation(intBuffer) {
     if(previousOperator === '+'){
         totalRodando += intBuffer;
-    } else if(previousOperator === '-') {
+    } else if(previousOperator === '−') {
         totalRodando -= intBuffer;
     } else if(previousOperator === '×') {
         totalRodando *= intBuffer;
@@ -86,4 +86,4 @@ function init(){
     })
 }
 
-init()
+init();
