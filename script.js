@@ -1,5 +1,5 @@
 let totalRodando = 0;
-let buffer = "0"
+let buffer = '0'
 let previousOperator;
 
 const screen = document.querySelector('.tela');
@@ -83,8 +83,7 @@ function handleNumber(numberString) {
 function init(){
     document.querySelector('.calc-botoes').addEventListener('click', function(event){
         buttonClick(event.target.innerText);
-        console.log('click')
     })
 }
 
-init();
+init()
