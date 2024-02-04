@@ -118,8 +118,8 @@ body {
         -webkit-backdrop-filter: blur(4px);
         background: rgba(255, 255, 255, 0.30);
         border: 1px solid rgba(255, 255, 255, 0.34);
-        flex-basis: 200px;
-        height: 390px;
+        flex-basis: 250px;
+        height: 400px;
         padding: 5px 10px;
     }
 
@@ -134,7 +134,7 @@ body {
         flex-basis: 20%;
         font-family: inherit;
         font-size: 24px;
-        height: 55px;
+        height: 56px;
     }
 
     .calc-botao-linha {
