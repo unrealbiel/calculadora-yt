@@ -5,7 +5,7 @@ let previousOperator;
 const screen = document.querySelector('.tela');
 
 function buttonClick(value) {
-    if (isNaN(value)) {
+    if(isNaN(value)) {
         handleSymbol(value);
     } else {
         handleNumber(value);
@@ -19,16 +19,17 @@ function handleSymbol(symbol) {
             buffer = '0';
             totalRodando = 0;
             break;
-            case '=': 
-            if (previousOperator === null) {
+        case '=': 
+            if(previousOperator === null) {
                 return
-            } flushOperation(parseInt(buffer));
+            } 
+            flushOperation(parseInt(buffer));
             previousOperator = null;
             buffer = totalRodando;
             totalRodando = 0;
             break;
         case '←':
-            if (buffer.length ===1) {
+            if(buffer.length ===1) {
                 buffer = '0';
             } else {
                 buffer = buffer.substring(0, buffer.length - 1);
@@ -44,13 +45,13 @@ function handleSymbol(symbol) {
 }
 
 function handleMath(symbol) {
-    if (buffer === '0') {
+    if(buffer === '0') {
         return;
     }
 
     const intBuffer = parseInt(buffer);
 
-    if (totalRodando === 0) {
+    if(totalRodando === 0) {
         totalRodando = intBuffer;
     } else {
         flushOperation(intBuffer);
@@ -61,19 +62,19 @@ function handleMath(symbol) {
 }
 
 function flushOperation(intBuffer) {
-    if (previousOperator === '+'){
+    if(previousOperator === '+'){
         totalRodando += intBuffer;
-    } else if (previousOperator === '-') {
+    } else if(previousOperator === '-') {
         totalRodando -= intBuffer;
-    } else if (previousOperator === '×') {
+    } else if(previousOperator === '×') {
         totalRodando *= intBuffer;
-    } else if (previousOperator === '÷') {
+    } else if(previousOperator === '÷') {
         totalRodando /= intBuffer;
     }
 }
 
 function handleNumber(numberString) {
-    if (buffer === '0'){
+    if(buffer === '0'){
         buffer = numberString;
     } else {
         buffer += numberString;
