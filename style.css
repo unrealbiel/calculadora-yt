@@ -118,8 +118,8 @@ body {
         -webkit-backdrop-filter: blur(4px);
         background: rgba(255, 255, 255, 0.30);
         border: 1px solid rgba(255, 255, 255, 0.34);
-        flex-basis: 300px;
-        height: 450px;
+        flex-basis: 200px;
+        height: 390px;
         padding: 5px 10px;
     }
 
@@ -134,7 +134,7 @@ body {
         flex-basis: 20%;
         font-family: inherit;
         font-size: 24px;
-        height: 60px;
+        height: 55px;
     }
 
     .calc-botao-linha {
@@ -142,6 +142,7 @@ body {
         justify-content: space-between;
         margin: 3% 0;
     }
+
     .tela {
         backdrop-filter: blur(5.5px);
         -webkit-backdrop-filter: blur(5.5px);
@@ -152,9 +153,9 @@ body {
         color: #232323;
         font-size: 35px;
         overflow: auto;
-        padding: 20px;
+        padding: 15px;
         text-align: right;
-        width: 330px;
+        width: 230px;
     }
 
     .double {
